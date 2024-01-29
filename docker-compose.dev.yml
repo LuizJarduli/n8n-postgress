@@ -27,6 +27,8 @@ services:
     image: docker.n8n.io/n8nio/n8n
     restart: always
     environment:
+      - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
+      - TZ=${TZ}
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres
       - DB_POSTGRESDB_PORT=5432
